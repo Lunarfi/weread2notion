@@ -12,7 +12,7 @@ jobs:
       NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
       NOTION_PAGE: ${{ secrets.NOTION_PAGE }}
       NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
-      WEREAD_COOKIE: ${{ secrets.WEREAD_COOKIE }}
+      WEREAD_COOKIE: ${{ secrets.NOTION_COOKIE }}
       CC_URL: ${{ secrets.CC_URL }}
       CC_ID: ${{ secrets.CC_ID }}
       CC_PASSWORD: ${{ secrets.CC_PASSWORD }}
@@ -41,8 +41,8 @@ jobs:
           github_heatmap weread --year $YEAR  --me "${{secrets.NAME}}" --with-animation --background-color=${{ vars.background_color||'#FFFFFF'}} --track-color=${{ vars.track_color||'#ACE7AE'}} --special-color1=${{ vars.special_color||'#69C16E'}} --special-color2=${{ vars.special_color2||'#549F57'}} --dom-color=${{ vars.dom_color||'#EBEDF0'}} --text-color=${{ vars.text_color||'#000000'}}
       - name: push
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "yingshanjiang6@gmail.com"
+          git config --local user.name "Lunarfi"
           git add .
           git commit -m 'add new cover' || echo "nothing to commit"
           git push || echo "nothing to push"
